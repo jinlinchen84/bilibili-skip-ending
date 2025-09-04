@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Bilibili 跳过视频结尾",
+  "version": "1.0",
+  "description": "自动跳过B站视频的结尾部分",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["https://www.bilibili.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.bilibili.com/video/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
